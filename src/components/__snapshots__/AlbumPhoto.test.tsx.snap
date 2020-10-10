@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AlbumPhoto should render 1`] = `
+Array [
+  <React.Fragment>
+    <div>
+      <img
+        alt="album thumbnail"
+        className="album-thumbnail"
+        onClick={[Function]}
+        src="mock thumbnail url"
+      />
+    </div>
+    <div>
+      <img
+        alt="album thumbnail"
+        className="album-thumbnail"
+        onClick={[Function]}
+        src="mock thumbnail url 2"
+      />
+    </div>
+  </React.Fragment>,
+]
+`;

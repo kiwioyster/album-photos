@@ -38,6 +38,10 @@ const mockUsers: IUser[] = [
 configure({ adapter: new Adapter() });
 describe('Album', () => {
   afterEach(cleanup);
+  it('should render', () => {
+    const component = shallow(<Album album={mockAlbum} users={mockUsers} />);
+    expect(component.getElements()).toMatchSnapshot();
+  });
   it('should get from api', async () => {
     const mock = new MockAdapter(axios);
     const mockData: IPhoto[] = [

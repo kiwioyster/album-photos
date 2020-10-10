@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, configure, mount } from 'enzyme';
+import { shallow, configure } from 'enzyme';
 import AlbumPhoto from './AlbumPhoto';
 import Adapter from 'enzyme-adapter-react-16';
 import { IPhoto } from '../type';
@@ -24,6 +24,10 @@ const mockPhotos: IPhoto[] = [
 ];
 describe('AlbumPhoto', () => {
   afterEach(cleanup);
+  it('should render', () => {
+    const component = shallow(<AlbumPhoto photos={mockPhotos} />);
+    expect(component.getElements()).toMatchSnapshot();
+  });
   it('should not show album photo after mount', () => {
     const component = shallow(<AlbumPhoto photos={mockPhotos} />);
     expect(component.find('.album-photo-fullsize').length).toEqual(0);

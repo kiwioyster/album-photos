@@ -11,6 +11,10 @@ import Album from './Album';
 configure({ adapter: new Adapter() });
 describe('AlbumList', () => {
   afterEach(cleanup);
+  it('should render', () => {
+    const component = shallow(<AlbumList />);
+    expect(component.getElements()).toMatchSnapshot();
+  });
   it('should get from api', async () => {
     const mock = new MockAdapter(axios);
     const mockAlbums: IAlbum[] = [

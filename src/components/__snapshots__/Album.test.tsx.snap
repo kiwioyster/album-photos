@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Album should render 1`] = `
+Array [
+  <div
+    className="album"
+    onClick={[Function]}
+  >
+    <div
+      className="album-title"
+    >
+      Title: 
+      mock album
+    </div>
+    <div
+      className="album-user"
+    >
+      User: 
+      mock user 2
+    </div>
+    <AlbumPhoto
+      photos={Array []}
+    />
+  </div>,
+]
+`;
